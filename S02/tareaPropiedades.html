@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades CSS Utilizadas</title>
+    <link rel="stylesheet" href="estilosTabla.css">
+</head>
+<body>
+    <h1>Propiedades CSS Utilizadas en el Ejercicio de la Semana 1</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre de Propiedad</th>
+                <th>Función</th>
+                <th>Posibles Valores</th>
+                <th>Ejemplo del Ejercicio</th>
+                <th>Categoría</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Propiedades de Texto y Fuente -->
+            <tr class="category">
+                <td colspan="5">Propiedades de Texto y Fuente</td>
+            </tr>
+            <tr>
+                <td>font-family</td>
+                <td>Define la familia de fuentes que se utilizará para el texto</td>
+                <td>Nombre de fuente específica, familia genérica (serif, sans-serif, monospace), o lista de fuentes</td>
+                <td class="example">font-family: Arial, sans-serif;</td>
+                <td>Texto</td>
+            </tr>
+            <tr>
+                <td>color</td>
+                <td>Define el color del texto</td>
+                <td>Nombres de colores, códigos hexadecimales, RGB, RGBA, HSL, HSLA</td>
+                <td class="example">color: #333; <br>color: white; <br>color: #d9534f;</td>
+                <td>Texto</td>
+            </tr>
+            <tr>
+                <td>text-align</td>
+                <td>Alinea el texto horizontalmente dentro de su contenedor</td>
+                <td>left, right, center, justify</td>
+                <td class="example">text-align: center;</td>
+                <td>Texto</td>
+            </tr>
+            <tr>
+                <td>font-style</td>
+                <td>Define el estilo de la fuente (implícitamente usado con &lt;em&gt;)</td>
+                <td>normal, italic, oblique</td>
+                <td class="example">font-style: italic; (en blockquote)</td>
+                <td>Texto</td>
+            </tr>
+            <tr>
+                <td>font-weight</td>
+                <td>Define el grosor de la fuente</td>
+                <td>normal, bold, bolder, lighter, 100-900</td>
+                <td class="example">font-weight: bold;</td>
+                <td>Texto</td>
+            </tr>
+            <tr>
+                <td>text-decoration</td>
+                <td>Define la decoración del texto</td>
+                <td>none, underline, overline, line-through</td>
+                <td class="example">text-decoration: none;</td>
+                <td>Texto</td>
+            </tr>
+
+            <!-- Propiedades de Diseño y Espaciado -->
+            <tr class="category">
+                <td colspan="5">Propiedades de Diseño y Espaciado</td>
+            </tr>
+            <tr>
+                <td>margin</td>
+                <td>Define el espacio exterior alrededor de un elemento</td>
+                <td>Longitud (px, em, rem, %), auto, 0</td>
+                <td class="example">margin: 20px; <br>margin-top: 20px; <br>margin-right: 15px;</td>
+                <td>Diseño</td>
+            </tr>
+            <tr>
+                <td>padding</td>
+                <td>Define el espacio interior de un elemento</td>
+                <td>Longitud (px, em, rem, %), 0</td>
+                <td class="example">padding: 20px; <br>padding: 15px; <br>padding-left: 10px;</td>
+                <td>Diseño</td>
+            </tr>
+            <tr>
+                <td>display</td>
+                <td>Define cómo se muestra un elemento en el flujo del documento</td>
+                <td>block, inline, inline-block, flex, grid, none</td>
+                <td class="example">display: inline;</td>
+                <td>Diseño</td>
+            </tr>
+            <tr>
+                <td>width</td>
+                <td>Define el ancho de un elemento</td>
+                <td>Longitud (px, em, rem, %), auto</td>
+                <td class="example">width: 100%;</td>
+                <td>Diseño</td>
+            </tr>
+
+            <!-- Propiedades de Fondo -->
+            <tr class="category">
+                <td colspan="5">Propiedades de Fondo</td>
+            </tr>
+            <tr>
+                <td>background-color</td>
+                <td>Define el color de fondo de un elemento</td>
+                <td>Nombres de colores, códigos hexadecimales, RGB, RGBA, HSL, HSLA, transparent</td>
+                <td class="example">background-color: #f4f4f4; <br>background-color: white; <br>background-color: #0077cc;</td>
+                <td>Fondo</td>
+            </tr>
+            
+            <!-- Propiedades de Borde -->
+            <tr class="category">
+                <td colspan="5">Propiedades de Borde</td>
+            </tr>
+            <tr>
+                <td>border</td>
+                <td>Define el borde de un elemento (atajo para ancho, estilo y color)</td>
+                <td>width style color</td>
+                <td class="example">border: 1px solid #666; <br>border: none;</td>
+                <td>Borde</td>
+            </tr>
+            <tr>
+                <td>border-bottom</td>
+                <td>Define el borde inferior de un elemento</td>
+                <td>width style color</td>
+                <td class="example">border-bottom: 2px solid #666;</td>
+                <td>Borde</td>
+            </tr>
+            <tr>
+                <td>border-left</td>
+                <td>Define el borde izquierdo de un elemento</td>
+                <td>width style color</td>
+                <td class="example">border-left: 5px solid #0077cc;</td>
+                <td>Borde</td>
+            </tr>
+            <tr>
+                <td>border-collapse</td>
+                <td>Define si los bordes de las tablas deben colapsar en un solo borde</td>
+                <td>collapse, separate</td>
+                <td class="example">border-collapse: collapse;</td>
+                <td>Borde</td>
+            </tr>
+            <tr>
+                <td>border-radius</td>
+                <td>Define las esquinas redondeadas de un elemento</td>
+                <td>Longitud (px, em, rem, %), 0</td>
+                <td class="example">border-radius: 5px; <br>border-radius: 3px;</td>
+                <td>Borde</td>
+            </tr>
+            
+            <!-- Propiedades de Efecto -->
+            <tr class="category">
+                <td colspan="5">Propiedades de Efecto</td>
+            </tr>
+            <tr>
+                <td>box-shadow</td>
+                <td>Añade una sombra a un elemento</td>
+                <td>h-offset v-offset blur spread color inset</td>
+                <td class="example">box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);</td>
+                <td>Efecto</td>
+            </tr>
+            
+            <!-- Propiedades de Lista -->
+            <tr class="category">
+                <td colspan="5">Propiedades de Lista</td>
+            </tr>
+            <tr>
+                <td>list-style</td>
+                <td>Define el estilo de los elementos de una lista</td>
+                <td>list-style-type list-style-position list-style-image</td>
+                <td class="example">list-style: none;</td>
+                <td>Lista</td>
+            </tr>
+
+            <!-- Propiedades de Cursor -->
+            <tr class="category">
+                <td colspan="5">Propiedades de Cursor</td>
+            </tr>
+            <tr>
+                <td>cursor</td>
+                <td>Define el tipo de cursor que se mostrará cuando el puntero esté sobre un elemento</td>
+                <td>auto, default, pointer, wait, text, help, etc.</td>
+                <td class="example">cursor: pointer;</td>
+                <td>Interacción</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Propiedades Específicas para Estados y Pseudoclases</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Selector/Estado</th>
+                <th>Función</th>
+                <th>Propiedades Aplicadas</th>
+                <th>Ejemplo del Ejercicio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>:hover</td>
+                <td>Se aplica cuando el cursor está sobre el elemento</td>
+                <td>Cualquier propiedad CSS</td>
+                <td class="example">button:hover { background-color: #005fa3; }</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <footer>
+        <p>Esta tabla detalla todas las propiedades CSS utilizadas en el ejercicio de la Semana 1, incluyendo su función, posibles valores, ejemplos específicos del código y la categoría a la que pertenecen.</p>
+        <p>© 2025 Desarrollo de Aplicaciones Web</p>
+    </footer>
+</body>
+</html>
