@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <!-- Estilos y definiciones -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2ecc71;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#27ae60;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c0392b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f39c12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d35400;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9b59b6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8e44ad;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="1200" height="900" fill="#f8f9fa" />
+  
+  <!-- Título Principal -->
+  <rect x="400" y="50" width="400" height="60" rx="15" fill="url(#grad1)" />
+  <text x="600" y="85" font-family="Arial" font-size="20" fill="white" text-anchor="middle">Motores de Navegación Web</text>
+  
+  <!-- Nodo central -->
+  <circle cx="600" cy="180" r="30" fill="url(#grad1)" />
+  
+  <!-- Líneas de conexión principales -->
+  <line x1="600" y1="110" x2="600" y2="150" stroke="#2980b9" stroke-width="3" />
+  <line x1="600" y1="210" x2="240" y2="280" stroke="#2980b9" stroke-width="3" />
+  <line x1="600" y1="210" x2="600" y2="280" stroke="#2980b9" stroke-width="3" />
+  <line x1="600" y1="210" x2="960" y2="280" stroke="#2980b9" stroke-width="3" />
+  <line x1="600" y1="210" x2="150" y2="500" stroke="#2980b9" stroke-width="3" />
+  <line x1="600" y1="210" x2="1150" y2="600" stroke="#2980b9" stroke-width="3" />
+  
+  <!-- ¿Qué es un motor web? -->
+  <rect x="120" y="280" width="240" height="50" rx="15" fill="url(#grad2)" />
+  <text x="240" y="310" font-family="Arial" font-size="16" fill="white" text-anchor="middle">¿Qué es un motor web?</text>
+  
+  <rect x="110" y="340" width="260" height="30" rx="5" fill="white" stroke="#27ae60" />
+  <text x="240" y="360" font-family="Arial" font-size="12" fill="#333" text-anchor="middle">Componente clave de un navegador</text>
+  
+  <rect x="110" y="380" width="260" height="30" rx="5" fill="white" stroke="#27ae60" />
+  <text x="240" y="400" font-family="Arial" font-size="12" fill="#333" text-anchor="middle">Transforma código en páginas web</text>
+  
+  <rect x="110" y="420" width="260" height="30" rx="5" fill="white" stroke="#27ae60" />
+  <text x="240" y="440" font-family="Arial" font-size="12" fill="#333" text-anchor="middle">Interpreta HTML, CSS y JavaScript</text>
+  
+  <!-- Importancia en la navegación -->
+  <rect x="480" y="280" width="240" height="50" rx="15" fill="url(#grad3)" />
+  <text x="600" y="310" font-family="Arial" font-size="16" fill="white" text-anchor="middle">Importancia en la navegación</text>
+  
+  <rect x="470" y="340" width="260" height="30" rx="5" fill="white" stroke="#c0392b" />
+  <text x="600" y="360" font-family="Arial" font-size="12" fill="#333" text-anchor="middle">Determina compatibilidad web</text>
+  
+  <rect x="470" y="380" width="260" height="30" rx="5" fill="white" stroke="#c0392b" />
+  <text x="600" y="400" font-family="Arial" font-size="12" fill="#333" text-anchor="middle">Afecta velocidad de carga</text>
+  
+  <rect x="470" y="420" width="260" height="30" rx="5" fill="white" stroke="#c0392b" />
+  <text x="600" y="440" font-family="Arial" font-size="12" fill="#333" text-anchor="middle">Barrera para competencia</text>
+  
+  <!-- Principales motores web -->
+  <rect x="840" y="280" width="240" height="50" rx="15" fill="url(#grad4)" />
+  <text x="960" y="310" font-family="Arial" font-size="16" fill="white" text-anchor="middle">Principales motores web</text>
+  
+  <!-- Blink -->
+  <rect x="830" y="340" width="260" height="30" rx="5" fill="white" stroke="#d35400" />
+  <text x="960" y="360" font-family="Arial" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">Blink (Google, 2013)</text>
+  
+  <rect x="850" y="380" width="240" height="25" rx="5" fill="#f8f9fa" />
+  <text x="960" y="396" font-family="Arial" font-size="11" fill="#333" text-anchor="middle">Chrome, Edge, Opera</text>
+  
+  <!-- WebKit -->
+  <rect x="830" y="415" width="260" height="30" rx="5" fill="white" stroke="#d35400" />
+  <text x="960" y="435" font-family="Arial" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">WebKit (Apple, 2001)</text>
+  
+  <rect x="850" y="455" width="240" height="25" rx="5" fill="#f8f9fa" />
+  <text x="960" y="471" font-family="Arial" font-size="11" fill="#333" text-anchor="middle">Safari, obligatorio en iOS</text>
+  
+  <!-- Gecko -->
+  <rect x="830" y="490" width="260" height="30" rx="5" fill="white" stroke="#d35400" />
+  <text x="960" y="510" font-family="Arial" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">Gecko (Mozilla, 1998)</text>
+  
+  <rect x="850" y="530" width="240" height="25" rx="5" fill="#f8f9fa" />
+  <text x="960" y="546" font-family="Arial" font-size="11" fill="#333" text-anchor="middle">Firefox</text>
+  
+  <!-- Funciones clave -->
+  <rect x="30" y="500" width="240" height="50" rx="15" fill="url(#grad5)" />
+  <text x="150" y="530" font-family="Arial" font-size="16" fill="white" text-anchor="middle">Funciones clave</text>
+  
+  <rect x="20" y="560" width="260" height="30" rx="5" fill="white" stroke="#8e44ad" />
+  <text x="150" y="580" font-family="Arial" font-size="12" fill="#333" text-anchor="middle">Layout y renderizado</text>
+  
+  <rect x="20" y="600" width="260" height="30" rx="5" fill="white" stroke="#8e44ad" />
+  <text x="150" y="620" font-family="Arial" font-size="12" fill="#333" text-anchor="middle">Interpretación de JavaScript</text>
+  
+  <rect x="20" y="640" width="260" height="30" rx="5" fill="white" stroke="#8e44ad" />
+  <text x="150" y="660" font-family="Arial" font-size="12" fill="#333" text-anchor="middle">Compilación JIT</text>
+  
+  <rect x="20" y="680" width="260" height="30" rx="5" fill="white" stroke="#8e44ad" />
+  <text x="150" y="700" font-family="Arial" font-size="12" fill="#333" text-anchor="middle">Gestión de seguridad</text>
+  
+  <!-- Impacto en experiencia del usuario -->
+  <rect x="930" y="600" width="240" height="50" rx="15" fill="url(#grad1)" />
+  <text x="1050" y="630" font-family="Arial" font-size="16" fill="white" text-anchor="middle">Impacto en experiencia usuario</text>
+  
+  <rect x="920" y="660" width="260" height="30" rx="5" fill="white" stroke="#2980b9" />
+  <text x="1050" y="680" font-family="Arial" font-size="12" fill="#333" text-anchor="middle">Velocidad de carga</text>
+  
+  <rect x="920" y="700" width="260" height="30" rx="5" fill="white" stroke="#2980b9" />
+  <text x="1050" y="720" font-family="Arial" font-size="12" fill="#333" text-anchor="middle">Compatibilidad con sitios web</text>
+  
+  <rect x="920" y="740" width="260" height="30" rx="5" fill="white" stroke="#2980b9" />
+  <text x="1050" y="760" font-family="Arial" font-size="12" fill="#333" text-anchor="middle">Consumo de batería y recursos</text>
+  
+  <rect x="920" y="780" width="260" height="30" rx="5" fill="white" stroke="#2980b9" />
+  <text x="1050" y="800" font-family="Arial" font-size="12" fill="#333" text-anchor="middle">Seguridad y privacidad</text>
+  
+  <!-- Línea del tiempo -->
+  <rect x="300" y="780" width="600" height="60" rx="15" fill="#ecf0f1" stroke="#bdc3c7" />
+  <text x="600" y="810" font-family="Arial" font-size="14" fill="#333" text-anchor="middle">Evolución: Trident (1997) → Gecko (1998) → WebKit (2001) → Blink (2013)</text>
+  <text x="600" y="830" font-family="Arial" font-size="12" fill="#777" text-anchor="middle">Tendencia: Concentración en Blink (Chrome, Edge, Opera) y WebKit (Safari, iOS)</text>
+</svg>
