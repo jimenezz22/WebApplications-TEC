@@ -1,0 +1,82 @@
+/* Estilos personalizados para la presentación */
+
+/* Ajustes generales */
+.reveal {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .reveal h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    text-transform: none;
+  }
+  
+  .reveal h2 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+    text-transform: none;
+  }
+  
+  .reveal h3 {
+    font-size: 1.4em;
+    margin-bottom: 0.5em;
+    text-transform: none;
+  }
+  
+  /* Ajuste para imágenes */
+  .image-container {
+    margin: 20px auto;
+    max-width: 80%;
+  }
+  
+  .image-container img {
+    max-height: 400px;
+    width: auto;
+  }
+  
+  /* Estilos para layout de dos columnas */
+  .two-columns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .two-columns > div {
+    flex: 1;
+    padding: 0 20px;
+  }
+  
+  /* Destacar elementos importantes */
+  .highlight {
+    color: #f39c12;
+    font-weight: bold;
+  }
+  
+  /* Citas */
+  blockquote {
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 5px solid #4a7aa7;
+    padding: 10px 20px;
+    font-style: italic;
+  }
+  
+  /* Animaciones personalizadas */
+  .reveal .slides section .fragment.highlight-blue {
+    opacity: 1;
+    visibility: inherit;
+  }
+  
+  .reveal .slides section .fragment.highlight-blue.visible {
+    color: #2980b9;
+  }
+  
+  /* Personalización para código */
+  .reveal pre {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    margin: 20px auto;
+  }
+  
+  .reveal pre code {
+    padding: 15px;
+    font-size: 1.1em;
+  }
