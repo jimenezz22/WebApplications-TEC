@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex vs Grid: Características y Diferencias</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Flexbox vs Grid: Características y Diferencias</h1>
+
+    <h2>1. Características de Flexbox</h2>
+    <p>Flexbox (Flexible Box Layout) es un modelo de diseño unidimensional que permite distribuir el espacio entre los
+        elementos de una interfaz y mejorar las capacidades de alineación.</p>
+
+    <h3>Características principales:</h3>
+    <ul>
+        <li><strong>Diseño unidimensional</strong>: Trabaja principalmente en un solo eje a la vez (horizontal o
+            vertical).</li>
+        <li><strong>Direccionalidad</strong>: Puede cambiar fácilmente entre filas y columnas con la propiedad
+            <code>flex-direction</code>.</li>
+        <li><strong>Alineación</strong>: Ofrece propiedades como <code>justify-content</code> y <code>align-items</code>
+            para controlar la alineación.</li>
+        <li><strong>Orden</strong>: Permite cambiar el orden visual de los elementos sin modificar el HTML mediante la
+            propiedad <code>order</code>.</li>
+        <li><strong>Flexibilidad</strong>: Los elementos pueden crecer o encogerse según el espacio disponible con
+            <code>flex-grow</code>, <code>flex-shrink</code> y <code>flex-basis</code>.</li>
+        <li><strong>Distribución de espacio</strong>: Permite distribuir el espacio entre o alrededor de los elementos.
+        </li>
+    </ul>
+
+    <div class="code-block">
+        /* Estructura básica de Flexbox */
+        .flex-container {
+        display: flex;
+        flex-direction: row; /* por defecto */
+        justify-content: space-between;
+        align-items: center;
+        }
+
+        .flex-item {
+        flex: 1;
+        }
+    </div>
+
+    <h2>2. Características de Grid</h2>
+    <p>CSS Grid Layout es un sistema de diseño bidimensional que permite crear layouts complejos con filas y columnas
+        simultáneamente.</p>
+
+    <h3>Características principales:</h3>
+    <ul>
+        <li><strong>Diseño bidimensional</strong>: Trabaja simultáneamente con filas y columnas.</li>
+        <li><strong>Áreas explícitas</strong>: Permite definir áreas con nombres mediante
+            <code>grid-template-areas</code>.</li>
+        <li><strong>Control de alineación</strong>: Proporciona control detallado tanto a nivel de grid como de
+            elementos individuales.</li>
+        <li><strong>Espaciado</strong>: Incluye la propiedad <code>gap</code> para establecer espacios entre filas y
+            columnas.</li>
+        <li><strong>Posicionamiento preciso</strong>: Los elementos pueden colocarse en celdas específicas mediante
+            <code>grid-column</code> y <code>grid-row</code>.</li>
+        <li><strong>Unidades fraccionarias</strong>: Introduce la unidad <code>fr</code> para distribución proporcional
+            del espacio.</li>
+        <li><strong>Anidamiento</strong>: Permite crear grids dentro de grids para layouts complejos.</li>
+    </ul>
+
+    <div class="code-block">
+        /* Estructura básica de Grid */
+        .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+        }
+
+        .grid-item {
+        grid-column: 1 / 3; /* Ocupa desde línea 1 hasta línea 3 */
+        }
+    </div>
+
+    <h2>3. Principales Diferencias</h2>
+
+    <table>
+        <tr>
+            <th>Característica</th>
+            <th>Flexbox</th>
+            <th>Grid</th>
+        </tr>
+        <tr>
+            <td>Dimensionalidad</td>
+            <td>Unidimensional (fila O columna)</td>
+            <td>Bidimensional (filas Y columnas)</td>
+        </tr>
+        <tr>
+            <td>Enfoque de diseño</td>
+            <td>Basado en contenido, se adapta al contenido</td>
+            <td>Basado en layout, el contenido se adapta a la estructura</td>
+        </tr>
+        <tr>
+            <td>Control de espacios</td>
+            <td>Control sobre distribución en un solo eje</td>
+            <td>Control preciso en ambos ejes simultáneamente</td>
+        </tr>
+        <tr>
+            <td>Alineación</td>
+            <td>Alineación en el eje principal y transversal</td>
+            <td>Alineación a nivel de celda, elemento, fila y columna</td>
+        </tr>
+        <tr>
+            <td>Anidamiento</td>
+            <td>Necesita contenedores adicionales para layouts complejos</td>
+            <td>Puede crear layouts complejos sin contenedores adicionales</td>
+        </tr>
+        <tr>
+            <td>Soporte de navegadores</td>
+            <td>Excelente (incluso en navegadores antiguos)</td>
+            <td>Muy bueno (excepto versiones muy antiguas de IE)</td>
+        </tr>
+        <tr>
+            <td>Curva de aprendizaje</td>
+            <td>Relativamente sencilla</td>
+            <td>Más compleja</td>
+        </tr>
+    </table>
+
+    <h2>4. Casos de Uso Recomendados</h2>
+
+    <h3>Cuándo usar Flexbox:</h3>
+    <ul>
+        <li><strong>Navegaciones y menús</strong>: Para barras de navegación horizontales o verticales.</li>
+        <li><strong>Alineación de elementos</strong>: Cuando necesites centrar elementos vertical y horizontalmente.
+        </li>
+        <li><strong>Distribución de elementos en una sola línea o columna</strong>: Como listas de elementos, tarjetas
+            en una fila, etc.</li>
+        <li><strong>Layouts pequeños</strong>: Componentes como tarjetas, cabeceras, footers.</li>
+        <li><strong>Cuando la cantidad de elementos es dinámica</strong>: Flexbox maneja bien casos donde no sabes
+            cuántos elementos habrá.</li>
+    </ul>
+
+    <h3>Cuándo usar Grid:</h3>
+    <ul>
+        <li><strong>Layouts de página completa</strong>: Para estructurar secciones principales de una página.</li>
+        <li><strong>Interfaces tipo dashboard</strong>: Donde necesitas organizar múltiples componentes en filas y
+            columnas.</li>
+        <li><strong>Galerías de imágenes</strong>: Especialmente cuando las imágenes tienen diferentes tamaños.</li>
+        <li><strong>Layouts complejos</strong>: Cuando necesitas colocar elementos precisamente en un patrón
+            bidimensional.</li>
+        <li><strong>Cuando conoces la estructura de antemano</strong>: Grid es ideal cuando tienes una idea clara del
+            layout deseado.</li>
+    </ul>
+
+    <h2>5. Ejemplos Prácticos</h2>
+
+    <h3 class="example-title">Ejemplo 1: Flexbox - Fila horizontal</h3>
+    <div class="flex-container">
+        <div class="item flex-item">Item 1</div>
+        <div class="item flex-item">Item 2</div>
+        <div class="item flex-item">Item 3</div>
+    </div>
+
+    <style>
+        .flex-container {
+            display: flex;
+        }
+
+        .flex-item {
+            flex: 1;
+        }
+    </style>
+    </div>
+
+    <h3 class="example-title">Ejemplo 2: Flexbox - Columna vertical</h3>
+    <div class="flex-container-column">
+        <div class="item flex-item">Item 1</div>
+        <div class="item flex-item">Item 2</div>
+        <div class="item flex-item">Item 3</div>
+    </div>
+
+    <style>
+        .flex-container-column {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+    </div>
+
+    <h3 class="example-title">Ejemplo 3: Grid - Cuadrícula básica</h3>
+    <div class="grid-container">
+        <div class="item grid-item">Item 1</div>
+        <div class="item grid-item">Item 2</div>
+        <div class="item grid-item">Item 3</div>
+        <div class="item grid-item">Item 4</div>
+        <div class="item grid-item">Item 5</div>
+        <div class="item grid-item">Item 6</div>
+    </div>
+
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+    </style>
+    </div>
+
+    <h3 class="example-title">Ejemplo 4: Grid - Layout con áreas nombradas</h3>
+    <div class="grid-container-areas">
+        <div class="item header">Header</div>
+        <div class="item sidebar">Sidebar</div>
+        <div class="item content">Contenido Principal</div>
+        <div class="item footer">Footer</div>
+    </div>
+
+    <style>
+        .grid-container-areas {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "sidebar content content"
+                "footer footer footer";
+            gap: 10px;
+        }
+
+        .header {
+            grid-area: header;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+        }
+
+        .content {
+            grid-area: content;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+    </style>
+    </div>
+
+    <h3 class="example-title">Ejemplo 5: Diseño Responsive</h3>
+    <p>Flexbox:</p>
+    <div class="responsive-container responsive-flex">
+        <div class="item flex-item">Item 1</div>
+        <div class="item flex-item">Item 2</div>
+        <div class="item flex-item">Item 3</div>
+    </div>
+
+    <p>Grid:</p>
+    <div class="responsive-container responsive-grid">
+        <div class="item grid-item">Item 1</div>
+        <div class="item grid-item">Item 2</div>
+        <div class="item grid-item">Item 3</div>
+    </div>
+
+    <div class="code-block">
+        /* Diseño responsive */
+        /* Móvil primero */
+        .responsive-flex {
+        display: flex;
+        flex-direction: column;
+        }
+
+        .responsive-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        }
+
+        /* Media query para pantallas más grandes */
+        @media (min-width: 768px) {
+        .responsive-flex {
+        flex-direction: row;
+        }
+
+        .responsive-grid {
+        grid-template-columns: repeat(3, 1fr);
+        }
+        }
+    </div>
+
+    <h2>6. Mejores Prácticas para el Nombramiento de Clases en CSS</h2>
+
+    <p>La forma en que nombramos nuestras clases CSS tiene un impacto significativo en la mantenibilidad y escalabilidad
+        de nuestros proyectos. A continuación, se presentan las metodologías más populares para el nombramiento de
+        clases CSS:</p>
+
+    <h3>Diferentes propuestas para nomenclatura CSS</h3>
+
+    <table>
+        <tr>
+            <th>Metodología</th>
+            <th>Descripción</th>
+            <th>Ejemplo</th>
+        </tr>
+        <tr>
+            <td><strong>BEM (Block Element Modifier)</strong></td>
+            <td>Divide la interfaz en bloques independientes. Los nombres siguen el patrón:
+                bloque__elemento--modificador.</td>
+            <td><code>.card__title--highlighted</code></td>
+        </tr>
+        <tr>
+            <td><strong>OOCSS (Object Oriented CSS)</strong></td>
+            <td>Separa la estructura del aspecto visual y reutiliza patrones comunes.</td>
+            <td><code>.media</code>, <code>.theme-background</code></td>
+        </tr>
+        <tr>
+            <td><strong>SMACSS (Scalable and Modular Architecture for CSS)</strong></td>
+            <td>Categoriza reglas CSS en base, layout, módulo, estado y tema.</td>
+            <td><code>.l-header</code>, <code>.is-active</code></td>
+        </tr>
+        <tr>
+            <td><strong>ITCSS (Inverted Triangle CSS)</strong></td>
+            <td>Organiza CSS en capas de especificidad creciente.</td>
+            <td><code>.o-container</code>, <code>.c-card</code></td>
+        </tr>
+        <tr>
+            <td><strong>Atomic CSS</strong></td>
+            <td>Utiliza clases pequeñas y de propósito único (una propiedad CSS por clase).</td>
+            <td><code>.mt-10</code>, <code>.flex</code></td>
+        </tr>
+        <tr>
+            <td><strong>Utility-First (como Tailwind)</strong></td>
+            <td>Compone interfaces aplicando clases de utilidad predefinidas directamente en el HTML.</td>
+            <td><code>.flex</code>, <code>.text-center</code>, <code>.py-4</code></td>
+        </tr>
+    </table>
+
+    <h3>Ventajas y desventajas de cada propuesta</h3>
+
+    <table>
+        <tr>
+            <th>Metodología</th>
+            <th>Ventajas</th>
+            <th>Desventajas</th>
+        </tr>
+        <tr>
+            <td><strong>BEM</strong></td>
+            <td>
+                <ul>
+                    <li>Nomenclatura clara y estructurada</li>
+                    <li>Previene conflictos de nombres</li>
+                    <li>Facilita entender la relación entre componentes</li>
+                    <li>Buena para proyectos grandes</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Nombres de clase muy largos</li>
+                    <li>HTML puede verse sobrecargado</li>
+                    <li>Curva de aprendizaje inicial</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>OOCSS</strong></td>
+            <td>
+                <ul>
+                    <li>Reduce la duplicación de código</li>
+                    <li>Facilita la reutilización</li>
+                    <li>CSS más ligero y eficiente</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Múltiples clases en un elemento</li>
+                    <li>Difícil de mantener consistencia en equipos grandes</li>
+                    <li>Puede ser difícil de rastrear</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>SMACSS</strong></td>
+            <td>
+                <ul>
+                    <li>Organización clara por categorías</li>
+                    <li>Flexible y adaptable</li>
+                    <li>Buena para proyectos de cualquier tamaño</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Requiere disciplina en la implementación</li>
+                    <li>Menos prescriptivo que otras metodologías</li>
+                    <li>Prefijos pueden volverse confusos</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>ITCSS</strong></td>
+            <td>
+                <ul>
+                    <li>Evita problemas de especificidad</li>
+                    <li>Estructura lógica y escalable</li>
+                    <li>Buena para proyectos grandes</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Complejo para principiantes</li>
+                    <li>Requiere planificación previa</li>
+                    <li>Mayor tiempo inicial de configuración</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Atomic CSS</strong></td>
+            <td>
+                <ul>
+                    <li>CSS muy reducido (no crece con el proyecto)</li>
+                    <li>Evita duplicación de estilos</li>
+                    <li>Cambios rápidos sin editar CSS</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>HTML sobrecargado con muchas clases</li>
+                    <li>Difícil de mantener consistencia visual</li>
+                    <li>Cambios globales son difíciles</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Utility-First</strong></td>
+            <td>
+                <ul>
+                    <li>Desarrollo rápido</li>
+                    <li>No necesitas nombrar componentes</li>
+                    <li>Evita CSS personalizado</li>
+                    <li>Consistencia con valores predefinidos</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>HTML con muchas clases</li>
+                    <li>Curva de aprendizaje para memorizar clases</li>
+                    <li>Puede dificultar la legibilidad del HTML</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <h3>Ejemplos de código con diferentes metodologías</h3>
+
+    <h4>BEM</h4>
+    <div class="code-block">
+        /* Bloque */
+        .card {
+        background: white;
+        border-radius: 4px;
+        }
+
+        /* Elemento */
+        .card__title {
+        font-size: 18px;
+        font-weight: bold;
+        }
+
+        /* Modificador */
+        .card--featured {
+        border: 2px solid gold;
+        }
+
+        <!-- HTML -->
+        <div class="card card--featured">
+            <h2 class="card__title">Título</h2>
+            <p class="card__content">Contenido...</p>
+        </div>
+    </div>
+
+    <h4>Utility-First (Tailwind)</h4>
+    <div class="code-block">
+        <!-- HTML con clases de utilidad -->
+        <div class="bg-white rounded shadow p-4 border-l-4 border-blue-500">
+            <h2 class="text-xl font-bold mb-2">Título</h2>
+            <p class="text-gray-700">Contenido...</p>
+        </div>
+    </div>
+
+    <h3>Recomendaciones para elegir una metodología</h3>
+    <ul>
+        <li><strong>Para proyectos personales pequeños</strong>: Utility-First o un enfoque sencillo puede ser
+            suficiente.</li>
+        <li><strong>Para proyectos medianos a grandes</strong>: BEM o SMACSS ofrecen un buen equilibrio entre estructura
+            y flexibilidad.</li>
+        <li><strong>Para proyectos corporativos o equipos grandes</strong>: Combinar BEM con ITCSS puede proporcionar la
+            mejor organización y escalabilidad.</li>
+        <li><strong>Para desarrollo rápido</strong>: Los frameworks de Utility-First como Tailwind permiten iterar
+            rápidamente.</li>
+    </ul>
+
+    <p>Lo más importante es mantener la consistencia en todo el proyecto y asegurarse de que todos los miembros del
+        equipo entiendan y sigan la metodología elegida.</p>
+
+
+    <h2>7. Conclusión</h2>
+    <p>Tanto Flexbox como Grid son herramientas poderosas para el diseño web moderno. La elección entre uno u otro
+        dependerá del tipo de layout que se quiera crear:</p>
+    <ul>
+        <li>Flexbox es ideal para diseños unidimensionales y componentes simples.</li>
+        <li>Grid es perfecto para layouts complejos y bidimensionales.</li>
+        <li>A menudo, la mejor solución es usar ambos de manera complementaria: Grid para la estructura general de la
+            página y Flexbox para componentes internos.</li>
+    </ul>
+</body>
+
+</html>

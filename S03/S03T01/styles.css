@@ -1,0 +1,163 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+    background-color: #fcfcfc;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #3498db;
+    margin-top: 30px;
+}
+
+h3 {
+    color: #2980b9;
+}
+
+.example-title {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+code {
+    background-color: #f8f9fa;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.code-block {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 15px 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Ejemplos de Flexbox */
+.flex-container {
+    display: flex;
+    background-color: #e3f2fd;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.flex-container-column {
+    display: flex;
+    flex-direction: column;
+    background-color: #e3f2fd;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.flex-container-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #e3f2fd;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* Ejemplos de Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background-color: #e8f5e9;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.grid-container-areas {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "sidebar content content"
+        "footer footer footer";
+    gap: 10px;
+    background-color: #e8f5e9;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.header { grid-area: header; background-color: #c8e6c9; }
+.sidebar { grid-area: sidebar; background-color: #a5d6a7; }
+.content { grid-area: content; background-color: #81c784; }
+.footer { grid-area: footer; background-color: #c8e6c9; }
+
+/* Elementos comunes */
+.item {
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.flex-item {
+    background-color: #bbdefb;
+    flex: 1;
+}
+
+.grid-item {
+    background-color: #c8e6c9;
+}
+
+/* Ejemplo responsive */
+.responsive-container {
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* Diseño por defecto (móvil primero) */
+.responsive-flex {
+    display: flex;
+    flex-direction: column;
+    background-color: #e3f2fd;
+}
+
+.responsive-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    background-color: #e8f5e9;
+}
+
+/* Media query para pantallas más grandes */
+@media (min-width: 768px) {
+    .responsive-flex {
+        flex-direction: row;
+    }
+    
+    .responsive-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
