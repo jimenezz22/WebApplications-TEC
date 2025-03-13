@@ -3,16 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Presentación</title>
+  <title>Presentación Tailwind CSS</title>
   
   <!-- Estilos de Reveal.js -->
   <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
   
   <!-- Tema de Reveal.js (puedes cambiarlo) -->
-  <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/moon.css">
+  <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/night.css">
   
   <!-- Para resaltado de código -->
   <link rel="stylesheet" href="node_modules/reveal.js/plugin/highlight/monokai.css">
+  
+  <!-- Tailwind CSS desde CDN para desarrollo (en producción deberías compilarlo) -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   
   <!-- Estilos personalizados -->
   <link rel="stylesheet" href="css/styles.css">
@@ -21,108 +24,323 @@
   <div class="reveal">
     <div class="slides">
       <!-- Slide 1: Portada -->
-      <section data-background-gradient="linear-gradient(to bottom, #283593, #1976d2)">
-        <h1>Título de la Presentación</h1>
-        <h3>Subtítulo o descripción</h3>
-        <p>Nombre del Presentador</p>
-        <p><small>Marzo 2025</small></p>
-      </section>
-
-      <!-- Slide 2: Introducción -->
       <section>
-        <h2>Introducción</h2>
-        <ul>
-          <li>Punto clave 1</li>
-          <li>Punto clave 2</li>
-          <li>Punto clave 3</li>
-        </ul>
-        <aside class="notes">
-          Notas del presentador: Esta sección introduce los conceptos principales.
-        </aside>
-      </section>
-
-      <!-- Slide 3: Con imagen -->
-      <section>
-        <h2>Sección con Imagen</h2>
-        <div class="image-container">
-          <!-- Reemplaza esta URL con tu imagen local o usa una de placeholder -->
-          <img src="https://via.placeholder.com/500x300" alt="Descripción de la imagen">
+        <h2>Tailwind CSS</h2>
+        <div class="flex justify-center w-full my-6">
+          <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSDKn3vA2YUbXzN0ZC3gALWJ08gJN-Drl15w&s' alt="Logo de Tailwind CSS" class="w-32 h-auto">
         </div>
-        <p>Texto descriptivo sobre la imagen</p>
-      </section>
-
-      <!-- Slide 4: Con fragmentos (aparecen progresivamente) -->
-      <section>
-        <h2>Revelación Progresiva</h2>
-        <p>Los elementos aparecerán uno por uno:</p>
-        <ul>
-          <li class="fragment">Aparece primero</li>
-          <li class="fragment">Aparece segundo</li>
-          <li class="fragment">Aparece tercero</li>
-        </ul>
-      </section>
-
-      <!-- Slide 5: Con código -->
-      <section>
-        <h2>Ejemplo de Código</h2>
-        <pre><code class="hljs javascript">
-// Ejemplo de código JavaScript
-function saludar(nombre) {
-  return `Hola, ${nombre}!`;
-}
-
-const mensaje = saludar('Mundo');
-console.log(mensaje);
-        </code></pre>
-      </section>
-
-      <!-- Slide 6: Slides anidados (vertical) -->
-      <section>
-        <section>
-          <h2>Slides Verticales</h2>
-          <p>Presiona ↓ para ver más detalles</p>
-        </section>
-        <section>
-          <h3>Sub-slide 1</h3>
-          <p>Detalle adicional sobre el tema</p>
-        </section>
-        <section>
-          <h3>Sub-slide 2</h3>
-          <p>Más información relacionada</p>
-        </section>
-      </section>
-
-      <!-- Slide 7: Dos columnas -->
-      <section>
-        <h2>Contenido en Columnas</h2>
-        <div class="two-columns">
-          <div>
-            <h3>Columna 1</h3>
-            <ul>
-              <li>Punto 1</li>
-              <li>Punto 2</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Columna 2</h3>
-            <ul>
-              <li>Punto A</li>
-              <li>Punto B</li>
-            </ul>
-          </div>
+        <div class="flex justify-left w-full">
+          <p class="text-sm/6">Elaborado por:</p>
+          <ul>
+            <br>
+            <li>Mario Brenes</li>
+            <li>Valentina Méndez</li>
+            <li>Luis Jiménez</li>
+          </ul>
         </div>
       </section>
 
-      <!-- Slide 8: Contacto/Final -->
+      <!-- Slide 2: Agenda con slides verticales -->
+      <section>
+        <section>
+          <h2>Agenda</h2>
+        </section>
+        <section>
+          <h2>Contenido</h2>
+          <ul>
+            <li>¿Qué es Tailwind CSS?</li>
+            <li>¿Cómo funciona?</li>
+            <li>¿Cómo se instala?</li>
+            <li>Componentes de la Biblioteca</li>
+            <li>Ventajas y desventajas</li>
+            <li>Conclusión</li>
+            <li>Referencias</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- Slide 3: Información Básica con slides verticales -->
+      <section>
+        <section>
+          <h2>Información Básica</h2>
+        </section>
+        <section>
+          <div class="flex flex-row items-center justify-between w-full">
+            <aside class="w-1/3 flex justify-start">
+              <img src='https://pbs.twimg.com/media/GYbJWA0acAATnZB?format=jpg&name=large' 
+                  alt="Foto Adam Wathan"
+                  class="max-w-[250px] h-auto rounded-lg shadow-lg">
+            </aside>
+            <div class="w-2/3 text-left">
+              <h3 class="text-white font-bold">Creadores</h3>
+              <ul class="list-disc pl-5">
+                <li>Adam Wathan</li>
+                <li>Steve Schoger</li>
+                <li>Jonathan Reinink</li>
+                <li>David Hemphill</li>
+              </ul>
+              <p class="mt-4">Hicieron este proyecto de código abierto.</p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <p class="text-lg">Es un framework de CSS que se basa en la creación de clases para estilizar los elementos de una página web.</p>
+          <p>Es una herramienta que permite crear diseños personalizados sin la necesidad de escribir CSS.</p>
+        </section>
+        <section>
+          <div class="w-2/3 mx-auto text-left">
+            <h3 class="text-white font-bold"> Datos Importantes</h3>
+            <ul class="list-disc pl-5">
+              <li>Fecha de lanzamiento: 1 de noviembre de 2017</li>
+              <li>Última versión: 4.0.12</li>
+              <li>Repositorio: <a href='https://github.com/tailwindlabs/tailwindcss'>Tailwind CSS</a></li>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <div class="flex flex-row items-center justify-between w-full">  
+            <article class="flex items-left justify-end w-1/3">
+              <img src='images/TailwindGithubMetrics.jpeg' 
+                  alt="Estrellas"
+                  class="max-w-full h-auto">
+            </article>  
+            <div class="w-2/3 text-left">
+              <h3 class="text-white font-bold">Datos Importantes</h3>
+              <ul class="list-disc pl-5">
+                <li>Cuenta con 86.200 estrellas en GitHub</li>
+                <li>PurgeCSS integrado = CSS más ligero</li>
+                <li>Desarrollado por el cansancio de sobrescribir estilos en Bootstrap y optar por un sistema más flexible</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- Slide 4: Casos de Uso con slides verticales -->
+      <section>
+        <section>
+          <h3>Casos de Uso</h3>
+        </section>
+        <section>
+          <h3>Casos de Uso</h3>
+          <p>Se puede utilizar en cualquier proyecto web, pero es más recomendado para proyectos de diseño personalizado.</p>
+          <p>Permite crear diseños únicos sin la necesidad de escribir CSS.</p>
+        </section>
+        <section>
+          <h3>Ejemplos</h3>
+          <div class="flex flex-col items-center space-y-4">
+            <div class="bg-blue-500 text-white font-bold rounded-lg border shadow-lg px-4 py-2 text-sm">
+              <p>Botón con Tailwind</p>
+            </div>
+            <div class="bg-green-500 text-white font-bold rounded-lg border shadow-lg px-4 py-2 text-sm">
+              <p>Otro botón con Tailwind</p>
+            </div>
+            <div class="flex space-x-2">
+              <div class="bg-red-500 text-white font-bold rounded-lg border shadow-lg px-4 py-2 text-sm">
+                <p>Botón 1</p>
+              </div>
+              <div class="bg-yellow-500 text-black font-bold rounded-lg border shadow-lg px-4 py-2 text-sm">
+                <p>Botón 2</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>  
+          <h4>Páginas que usan Tailwind</h4>
+          <a href="https://www.nba.com/">
+            <h5 class="mb-2">NBA</h5>
+            <img src='https://www.logodesignlove.com/images/classic/nba-logo.jpg' alt="Logo de la NBA" class="max-w-[250px] h-auto mx-auto rounded-lg shadow-lg">
+          </a>
+        </section>
+        <section>  
+          <h4>Páginas que usan Tailwind</h4>
+          <a href="https://github.com/features/copilot">
+            <h5 class="mb-2">GitHub Copilot</h5>
+            <img src='https://www.clariontech.com/hubfs/GitHub%20Copilot.jpg' alt="Logo de Copilot" class="max-w-[50%] h-auto mx-auto">
+          </a>
+        </section>
+        <section>  
+          <h4>Páginas que usan Tailwind</h4>
+          <a href="https://www.netflix.com/browse">
+            <h5 class="mb-2">Netflix Top 10</h5>
+            <img src='https://i.blogs.es/5b2b73/screenshot_2020-02-25-netflix-2-/1366_2000.jpeg' alt="Netflix Top 10" class="max-w-[50%] h-auto mx-auto">
+          </a>
+        </section>
+        <section>  
+          <h4>Páginas que usan Tailwind</h4>
+          <a href="https://www.jpl.nasa.gov/">
+            <h5 class="mb-2">NASA Jet Propulsion Laboratory</h5>
+            <img src='https://www.voxelmatters.directory/wp-content/uploads/2024/02/NASA-JPL-1.jpg' alt="NASA Jet Propulsion Laboratory" class="max-w-[50%] h-auto mx-auto">
+          </a>
+        </section>
+        <section>  
+          <h4>Páginas que usan Tailwind</h4>
+          <a href="https://accounts.firefox.com/">
+            <h5 class="mb-2">Firefox LogIn</h5>
+            <img src='https://assets-prod.sumo.prod.webservices.mozgcp.net/media/uploads/images/2019-09-11-23-42-20-cb5e10.png' alt="Firefox LogIn" class="max-w-[50%] h-auto mx-auto">
+          </a>
+        </section>
+      </section>
+
+      <!-- Slide 5: Cómo se instala -->
+      <section>
+        <h2>¿Cómo se instala?</h2>
+        <div class="text-left mx-auto max-w-4xl">
+          <div class="mb-6">
+            <h3 class="text-xl mb-2">1. Instalación con NPM</h3>
+            <pre><code class="hljs bash">npm install -D tailwindcss
+npx tailwindcss init</code></pre>
+          </div>
+          <div class="mb-6">
+            <h3 class="text-xl mb-2">2. Configuración del archivo tailwind.config.js</h3>
+            <pre><code class="hljs javascript">/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}</code></pre>
+          </div>
+          <div>
+            <h3 class="text-xl mb-2">3. Agregar directivas a tu CSS</h3>
+            <pre><code class="hljs css">@tailwind base;
+@tailwind components;
+@tailwind utilities;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 6: Componentes de la Biblioteca -->
+      <section>
+        <h2>Componentes de la Biblioteca</h2>
+        <div class="grid grid-cols-2 gap-4 mt-6">
+          <div class="bg-gray-800 p-4 rounded-lg">
+            <h3 class="text-blue-400 mb-2">Utilidades de Layout</h3>
+            <ul class="text-left text-sm">
+              <li>Flexbox: <code class="text-yellow-200">flex, flex-row, justify-center</code></li>
+              <li>Grid: <code class="text-yellow-200">grid, grid-cols-2, gap-4</code></li>
+              <li>Posicionamiento: <code class="text-yellow-200">relative, absolute</code></li>
+            </ul>
+          </div>
+          <div class="bg-gray-800 p-4 rounded-lg">
+            <h3 class="text-green-400 mb-2">Espaciado y Tamaño</h3>
+            <ul class="text-left text-sm">
+              <li>Margen: <code class="text-yellow-200">m-4, mx-auto, mt-6</code></li>
+              <li>Padding: <code class="text-yellow-200">p-4, px-2, py-8</code></li>
+              <li>Ancho/Alto: <code class="text-yellow-200">w-full, h-12, max-w-lg</code></li>
+            </ul>
+          </div>
+          <div class="bg-gray-800 p-4 rounded-lg">
+            <h3 class="text-purple-400 mb-2">Tipografía</h3>
+            <ul class="text-left text-sm">
+              <li>Tamaño: <code class="text-yellow-200">text-sm, text-lg, text-2xl</code></li>
+              <li>Estilo: <code class="text-yellow-200">font-bold, italic, underline</code></li>
+              <li>Alineación: <code class="text-yellow-200">text-center, text-right</code></li>
+            </ul>
+          </div>
+          <div class="bg-gray-800 p-4 rounded-lg">
+            <h3 class="text-red-400 mb-2">Apariencia</h3>
+            <ul class="text-left text-sm">
+              <li>Colores: <code class="text-yellow-200">bg-blue-500, text-white</code></li>
+              <li>Bordes: <code class="text-yellow-200">border, rounded-lg, border-2</code></li>
+              <li>Efectos: <code class="text-yellow-200">shadow-lg, opacity-50</code></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 7: Ventajas y desventajas -->
+      <section>
+        <h2>Ventajas y Desventajas</h2>
+        <div class="flex space-x-4 mt-6">
+          <div class="w-1/2 bg-green-900 bg-opacity-40 p-4 rounded-lg">
+            <h3 class="text-green-400 mb-4">Ventajas</h3>
+            <ul class="text-left list-disc pl-5 space-y-2">
+              <li>Desarrollo rápido sin salir del HTML</li>
+              <li>Sistema de diseño consistente</li>
+              <li>Altamente personalizable</li>
+              <li>No necesita nombrar clases CSS</li>
+              <li>Elimina código no utilizado (PurgeCSS)</li>
+              <li>Excelente para proyectos pequeños y grandes</li>
+              <li>Gran comunidad y documentación</li>
+            </ul>
+          </div>
+          <div class="w-1/2 bg-red-900 bg-opacity-40 p-4 rounded-lg">
+            <h3 class="text-red-400 mb-4">Desventajas</h3>
+            <ul class="text-left list-disc pl-5 space-y-2">
+              <li>Código HTML más extenso (muchas clases)</li>
+              <li>Curva de aprendizaje para memorizar clases</li>
+              <li>Puede dificultar la separación de intereses</li>
+              <li>Desarrollo inicial más lento (hasta memorizar)</li>
+              <li>Puede ser complicado para principiantes</li>
+              <li>Requiere configuración adicional para proyectos grandes</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 8: Conclusión -->
+      <section data-background-gradient="linear-gradient(to bottom, #1976d2, #283593)">
+        <h2>Conclusión</h2>
+        <div class="text-left mx-auto max-w-2xl">
+          <p class="mb-4">Tailwind CSS representa un cambio de paradigma en el desarrollo frontend:</p>
+          <ul class="list-disc pl-5 space-y-2 mb-6">
+            <li>Enfoque utility-first que prioriza la flexibilidad y rapidez</li>
+            <li>Ideal para equipos que quieren control total sobre el diseño</li>
+            <li>Elimina la necesidad de crear y mantener hojas de estilo CSS complejas</li>
+            <li>Perfecto para desarrolladores que prefieren mantenerse en el HTML</li>
+          </ul>
+          <p class="italic">"Tailwind CSS no es solo una herramienta, es una filosofía de diseño web que prioriza la eficiencia y la personalización."</p>
+        </div>
+      </section>
+
+      <!-- Slide 9: Referencias -->
+      <section>
+        <h2>Referencias</h2>
+        <div class="text-left mx-auto max-w-2xl">
+          <ul class="list-disc pl-5 space-y-4">
+            <li><a href="https://tailwindcss.com/" class="text-blue-400 hover:underline">Sitio oficial de Tailwind CSS</a></li>
+            <li><a href="https://github.com/tailwindlabs/tailwindcss" class="text-blue-400 hover:underline">Repositorio de GitHub</a></li>
+            <li><a href="https://tailwindui.com/" class="text-blue-400 hover:underline">Tailwind UI - Componentes oficiales</a></li>
+            <li><a href="https://www.youtube.com/c/TailwindLabs" class="text-blue-400 hover:underline">Canal de YouTube de Tailwind Labs</a></li>
+            <li><a href="https://play.tailwindcss.com/" class="text-blue-400 hover:underline">Tailwind Play - Playground en línea</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 10: Contacto/Final -->
       <section data-background-gradient="linear-gradient(to bottom, #1976d2, #283593)">
         <h2>¡Gracias!</h2>
-        <p>Información de contacto:</p>
-        <ul>
-          <li>Email: tu@email.com</li>
-          <li>Web: www.tusitio.com</li>
-          <li>Twitter: @tuusuario</li>
-        </ul>
-        <p>¿Preguntas?</p>
+        <div class="bg-white bg-opacity-10 rounded-xl p-6 mt-6 mx-auto max-w-lg">
+          <p class="mb-4">¿Preguntas?</p>
+          <div class="flex justify-center space-x-6 mt-8">
+            <div class="text-center">
+              <div class="bg-blue-500 text-white rounded-full p-4 mb-2 inline-block">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <p class="text-sm">Email</p>
+            </div>
+            <div class="text-center">
+              <div class="bg-blue-500 text-white rounded-full p-4 mb-2 inline-block">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                </svg>
+              </div>
+              <p class="text-sm">Web</p>
+            </div>
+            <div class="text-center">
+              <div class="bg-blue-500 text-white rounded-full p-4 mb-2 inline-block">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
+                </svg>
+              </div>
+              <p class="text-sm">Twitter</p>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   </div>
@@ -137,6 +355,39 @@ console.log(mensaje);
   <script src="node_modules/reveal.js/plugin/zoom/zoom.js"></script>
 
   <!-- Inicialización -->
-  <script src="js/init.js"></script>
+  <script>
+    // Inicialización y configuración de Reveal.js
+    Reveal.initialize({
+      // Opciones de presentación
+      width: 1200,
+      height: 700,
+      margin: 0.1,
+      minScale: 0.2,
+      maxScale: 2.0,
+
+      // Controles de navegación
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      
+      // Transiciones
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+      transitionSpeed: 'default', // default/fast/slow
+
+      // Comportamiento
+      mouseWheel: false,
+      hideInactiveCursor: true,
+      hideCursorTime: 3000,
+
+      // Plugins
+      plugins: [
+        RevealMarkdown,
+        RevealHighlight,
+        RevealNotes,
+        RevealZoom
+      ]
+    });
+  </script>
 </body>
 </html>
