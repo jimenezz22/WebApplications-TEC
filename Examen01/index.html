@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Semáforo Interactivo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Administrador de Semáforo</h1>
+      <h2 id="modo">Automático</h2>
+    </header>
+
+    <div class="semaforo">
+      <div class="luz roja"></div>
+      <div class="luz amarilla"></div>
+      <div class="luz verde"></div>
+    </div>
+
+    <div class="botones">
+      <button onclick="cambiarLuz('roja')">Rojo</button>
+      <button onclick="cambiarLuz('amarilla')">Amarillo</button>
+      <button onclick="cambiarLuz('verde')">Verde</button>
+      <button onclick="modoAutomatico()">Automático</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

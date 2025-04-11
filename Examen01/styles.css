@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 350px;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  header h2 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #444;
+  }
+  
+  .semaforo {
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .luz {
+    width: 100px;
+    height: 100px;
+    background-color: #222;
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px #000;
+    transition: background-color 0.5s ease;
+  }
+  
+  .roja.active { background-color: red; }
+  .amarilla.active { background-color: yellow; }
+  .verde.active { background-color: green; }
+  
+  .botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #444;
+    color: white;
+    box-shadow: 2px 2px 5px #00000080;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #666;
+  }
+  
